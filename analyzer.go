@@ -253,21 +253,21 @@ func (s *scan) findings() []finding.Finding {
 	if sourceFiles >= 5 && !s.fp.HasTests {
 		add(finding.Finding{
 			Dimension: finding.DimMaintainability, Category: "missing-tests", Severity: finding.Medium, Confidence: finding.ConfidenceHigh,
-			Title:       "No automated tests found",
-			Description: fmt.Sprintf("%d source files and no test files were found. Changes cannot be verified automatically, so every modification carries regression risk.", sourceFiles),
-			Rule:        &finding.Rule{ID: "no-tests"},
-			Impact:      &finding.Impact{Technical: "Regressions are found by users, not by CI.", Business: "Each change is slower and riskier to ship."},
-			Remediation: &finding.Remediation{Summary: "Start with tests around the most-changed and most business-critical code paths, and run them in CI.", Automatable: false},
+			Title:                 "No automated tests found",
+			Description:           fmt.Sprintf("%d source files and no test files were found. Changes cannot be verified automatically, so every modification carries regression risk.", sourceFiles),
+			Rule:                  &finding.Rule{ID: "no-tests"},
+			Impact:                &finding.Impact{Technical: "Regressions are found by users, not by CI.", Business: "Each change is slower and riskier to ship."},
+			Remediation:           &finding.Remediation{Summary: "Start with tests around the most-changed and most business-critical code paths, and run them in CI.", Automatable: false},
 			FalsePositiveGuidance: "Tests stored outside the repository, or named without common test conventions, are not detected.",
 		})
 	}
 	if sourceFiles >= 5 && len(s.fp.HasCI) == 0 {
 		add(finding.Finding{
 			Dimension: finding.DimOperability, Category: "missing-ci", Severity: finding.Low, Confidence: finding.ConfidenceMedium,
-			Title:       "No CI/CD configuration found",
-			Description: "No pipeline definition (GitHub Actions, GitLab CI, Jenkins, CircleCI, Azure Pipelines, …) was found, so builds and tests are presumably run by hand.",
-			Rule:        &finding.Rule{ID: "no-ci"},
-			Remediation: &finding.Remediation{Summary: "Add a pipeline that builds, tests and scans every change.", Automatable: true},
+			Title:                 "No CI/CD configuration found",
+			Description:           "No pipeline definition (GitHub Actions, GitLab CI, Jenkins, CircleCI, Azure Pipelines, …) was found, so builds and tests are presumably run by hand.",
+			Rule:                  &finding.Rule{ID: "no-ci"},
+			Remediation:           &finding.Remediation{Summary: "Add a pipeline that builds, tests and scans every change.", Automatable: true},
 			FalsePositiveGuidance: "CI may be configured outside the repository (e.g. in a separate pipelines repository or a hosted service UI).",
 		})
 	}
@@ -293,11 +293,11 @@ func (s *scan) findings() []finding.Finding {
 		label := map[string]string{"npm": "npm/yarn/pnpm", "PyPI-pyproject": "Python", "RubyGems": "Bundler", "Packagist": "Composer", "crates.io": "Cargo"}[eco]
 		add(finding.Finding{
 			Dimension: finding.DimOperability, Category: "missing-lockfile", Severity: finding.Low, Confidence: finding.ConfidenceMedium,
-			Title:       "Dependencies are not locked",
-			Description: fmt.Sprintf("%s declares %s dependencies but no lockfile was found next to it, so builds can silently pick up different versions.", p, label),
-			Evidence:    []finding.Evidence{{Location: finding.Location{Path: p}}},
-			Rule:        &finding.Rule{ID: "no-lockfile"},
-			Remediation: &finding.Remediation{Summary: "Generate and commit the lockfile, and install from it in CI.", Automatable: true},
+			Title:                 "Dependencies are not locked",
+			Description:           fmt.Sprintf("%s declares %s dependencies but no lockfile was found next to it, so builds can silently pick up different versions.", p, label),
+			Evidence:              []finding.Evidence{{Location: finding.Location{Path: p}}},
+			Rule:                  &finding.Rule{ID: "no-lockfile"},
+			Remediation:           &finding.Remediation{Summary: "Generate and commit the lockfile, and install from it in CI.", Automatable: true},
 			FalsePositiveGuidance: "Libraries sometimes intentionally omit lockfiles.",
 		})
 	}

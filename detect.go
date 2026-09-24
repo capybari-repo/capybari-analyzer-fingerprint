@@ -2,8 +2,8 @@ package fingerprint
 
 import (
 	"bytes"
-	"encoding/json"
 	"context"
+	"encoding/json"
 	"os"
 	"os/exec"
 	"path"

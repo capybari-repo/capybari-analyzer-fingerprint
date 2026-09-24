@@ -47,9 +47,9 @@ type pyproject struct {
 	} `toml:"project"`
 	Tool struct {
 		Poetry struct {
-			Name         string                 `toml:"name"`
-			Dependencies map[string]any         `toml:"dependencies"`
-			Scripts      map[string]string      `toml:"scripts"`
+			Name         string            `toml:"name"`
+			Dependencies map[string]any    `toml:"dependencies"`
+			Scripts      map[string]string `toml:"scripts"`
 		} `toml:"poetry"`
 	} `toml:"tool"`
 	BuildSystem struct {
