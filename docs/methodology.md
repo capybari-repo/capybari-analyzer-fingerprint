@@ -35,7 +35,7 @@ A pinned version (e.g. `.nvmrc` `12.22.0`) wins over a range (`engines.node >=12
 | `no-lockfile` | low | medium | npm / pyproject / Bundler / Composer (and Cargo applications) manifest without a lockfile in the same directory |
 | `no-license` | info | medium | package.json with an entry point, not `private`, and no LICENSE file |
 
-`no-ci` and `no-readme` contribute to the **Operability** score. `no-tests` is a maintainability finding. The Code Health capability owns the Maintainability score.
+`no-ci`, `no-readme` and `no-license` count toward **Operability**, `no-tests` toward **Maintainability**, and `no-lockfile` toward **Dependency Hygiene**. A finding counts toward its dimension whichever capability produced it.
 
 ## Known limitations
 

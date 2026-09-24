@@ -292,7 +292,7 @@ func (s *scan) findings() []finding.Finding {
 		}
 		label := map[string]string{"npm": "npm/yarn/pnpm", "PyPI-pyproject": "Python", "RubyGems": "Bundler", "Packagist": "Composer", "crates.io": "Cargo"}[eco]
 		add(finding.Finding{
-			Dimension: finding.DimOperability, Category: "missing-lockfile", Severity: finding.Low, Confidence: finding.ConfidenceMedium,
+			Dimension: finding.DimDependencies, Category: "missing-lockfile", Severity: finding.Low, Confidence: finding.ConfidenceMedium,
 			Title:                 "Dependencies are not locked",
 			Description:           fmt.Sprintf("%s declares %s dependencies but no lockfile was found next to it, so builds can silently pick up different versions.", p, label),
 			Evidence:              []finding.Evidence{{Location: finding.Location{Path: p}}},
