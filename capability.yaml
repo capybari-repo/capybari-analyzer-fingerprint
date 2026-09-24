@@ -1,0 +1,30 @@
+id: fingerprint
+name: Project Fingerprint
+version: 0.1.0
+category: discovery
+summary: Identifies what the repository is (project type, primary language, package managers, build systems, runtimes, entry points, workspaces, tests, CI, containers, IaC, license, git history) and produces a compact fingerprint.
+stability: stable
+core_api: v0
+targets: [repository]
+requires: [inventory]
+provides: [fingerprint]
+findings: [missing-tests, missing-ci, missing-readme, missing-license, missing-lockfile]
+scores: [operability]
+cost: low
+execution:
+  local: true
+  network: none
+  ai: none
+privacy: Runs entirely locally, reading manifest files and local git history. Nothing leaves the machine.
+methodology: https://github.com/capybari/capybari-analyzer-fingerprint/blob/main/docs/methodology.md
+follow_ups:
+  - capability: tech-detect
+    reason: Identify frameworks, libraries and their versions behind the detected project type.
+  - capability: dependencies
+    reason: Manifests were found; inventory every direct and transitive dependency.
+    when:
+      evidence: [fingerprint]
+  - capability: code-health
+    reason: No automated tests were found, so check which areas are most complex and least protected.
+    when:
+      finding_categories: [missing-tests]

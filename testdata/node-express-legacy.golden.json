@@ -1,0 +1,40 @@
+{
+  "findings": [
+    "no-tests",
+    "no-ci"
+  ],
+  "fingerprint": {
+    "name": "legacy-shop-api",
+    "primary_language": "JavaScript",
+    "project_types": [
+      "application",
+      "web-backend"
+    ],
+    "package_managers": [
+      "npm"
+    ],
+    "build_systems": [
+      "npm scripts"
+    ],
+    "runtimes": [
+      {
+        "name": "Node.js",
+        "version": "12.22.0",
+        "source": ".nvmrc"
+      }
+    ],
+    "manifests": [
+      "package.json"
+    ],
+    "entry_points": [
+      "Dockerfile",
+      "src/server.js"
+    ],
+    "monorepo": false,
+    "has_tests": false,
+    "has_containers": true,
+    "has_docs": true,
+    "size": "tiny",
+    "digest": "fp_ced71e1056a9b8dc7247"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "findings": [
+    "no-readme"
+  ],
+  "fingerprint": {
+    "name": "static-site",
+    "primary_language": "HTML",
+    "project_types": [
+      "static-site"
+    ],
+    "monorepo": false,
+    "has_tests": false,
+    "has_containers": false,
+    "has_docs": false,
+    "size": "tiny",
+    "digest": "fp_46ef645b2a3830891dce"
+  }
+}

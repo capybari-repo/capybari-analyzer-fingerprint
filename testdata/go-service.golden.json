@@ -1,0 +1,38 @@
+{
+  "findings": [
+    "no-readme"
+  ],
+  "fingerprint": {
+    "name": "inventory-service",
+    "primary_language": "Go",
+    "project_types": [
+      "application",
+      "web-backend"
+    ],
+    "package_managers": [
+      "Go modules"
+    ],
+    "build_systems": [
+      "Make"
+    ],
+    "runtimes": [
+      {
+        "name": "Go",
+        "version": "1.19",
+        "source": "go.mod"
+      }
+    ],
+    "manifests": [
+      "go.mod"
+    ],
+    "entry_points": [
+      "cmd/server/"
+    ],
+    "monorepo": false,
+    "has_tests": true,
+    "has_containers": false,
+    "has_docs": false,
+    "size": "tiny",
+    "digest": "fp_0c1251ef491bd3718493"
+  }
+}

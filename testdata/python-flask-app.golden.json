@@ -1,0 +1,38 @@
+{
+  "findings": [
+    "no-readme"
+  ],
+  "fingerprint": {
+    "name": "python-flask-app",
+    "primary_language": "Python",
+    "project_types": [
+      "application",
+      "web-backend"
+    ],
+    "package_managers": [
+      "pip"
+    ],
+    "runtimes": [
+      {
+        "name": "Python",
+        "version": "3.7.9",
+        "source": ".python-version"
+      }
+    ],
+    "manifests": [
+      "requirements.txt"
+    ],
+    "entry_points": [
+      "Dockerfile"
+    ],
+    "monorepo": false,
+    "has_tests": true,
+    "ci": [
+      "GitHub Actions"
+    ],
+    "has_containers": true,
+    "has_docs": false,
+    "size": "tiny",
+    "digest": "fp_809e3ac961efa4ae855e"
+  }
+}
