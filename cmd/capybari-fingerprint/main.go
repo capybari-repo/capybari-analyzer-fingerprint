@@ -2,8 +2,8 @@
 package main
 
 import (
-	fingerprint "github.com/capybari/capybari-analyzer-fingerprint"
-	"github.com/capybari/capybari-core/standalone"
+	fingerprint "github.com/capybari-repo/capybari-analyzer-fingerprint"
+	"github.com/capybari-repo/capybari-core/standalone"
 )
 
 var version = "dev"

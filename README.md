@@ -27,7 +27,7 @@ Findings: missing tests, missing CI, missing README, unlocked dependencies, miss
 go run ./cmd/capybari-fingerprint ./path/to/project
 ```
 
-It is part of the unified [`capybari`](https://github.com/capybari/capybari-cli) tool.
+It is part of the unified [`capybari`](https://github.com/capybari-repo/capybari-cli) tool.
 
 ## License
 

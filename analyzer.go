@@ -14,9 +14,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/capybari/capybari-core/analyzer"
-	"github.com/capybari/capybari-core/facts"
-	"github.com/capybari/capybari-core/finding"
+	"github.com/capybari-repo/capybari-core/analyzer"
+	"github.com/capybari-repo/capybari-core/facts"
+	"github.com/capybari-repo/capybari-core/finding"
 )
 
 //go:embed capability.yaml

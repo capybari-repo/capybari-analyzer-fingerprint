@@ -5,11 +5,11 @@ import (
 	"path/filepath"
 	"testing"
 
-	fingerprint "github.com/capybari/capybari-analyzer-fingerprint"
-	"github.com/capybari/capybari-core/analyzer"
-	"github.com/capybari/capybari-core/analyzertest"
-	"github.com/capybari/capybari-core/facts"
-	"github.com/capybari/capybari-schemas"
+	fingerprint "github.com/capybari-repo/capybari-analyzer-fingerprint"
+	"github.com/capybari-repo/capybari-core/analyzer"
+	"github.com/capybari-repo/capybari-core/analyzertest"
+	"github.com/capybari-repo/capybari-core/facts"
+	"github.com/capybari-repo/capybari-schemas"
 	"gopkg.in/yaml.v3"
 )
 

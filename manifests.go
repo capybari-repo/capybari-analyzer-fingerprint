@@ -10,8 +10,8 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	"github.com/capybari/capybari-core/facts"
-	"github.com/capybari/capybari-core/fsutil"
+	"github.com/capybari-repo/capybari-core/facts"
+	"github.com/capybari-repo/capybari-core/fsutil"
 )
 
 func (s *scan) read(p string) []byte {

@@ -16,7 +16,7 @@ execution:
   network: none
   ai: none
 privacy: Runs entirely locally, reading manifest files and local git history. Nothing leaves the machine.
-methodology: https://github.com/capybari/capybari-analyzer-fingerprint/blob/main/docs/methodology.md
+methodology: https://github.com/capybari-repo/capybari-analyzer-fingerprint/blob/main/docs/methodology.md
 follow_ups:
   - capability: tech-detect
     reason: Identify frameworks, libraries and their versions behind the detected project type.

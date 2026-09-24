@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/capybari/capybari-core/facts"
+	"github.com/capybari-repo/capybari-core/facts"
 )
 
 var (
